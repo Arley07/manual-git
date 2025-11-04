@@ -9,28 +9,82 @@
 <body>
   <header>
     <h1>🔄 Combinar Ramas y Resolver Conflictos</h1>
-    <p>Aprende a fusionar tus ramas y resolver conflictos sin perder tu progreso.</p>
+    <p>Aprende cómo fusionar tus ramas correctamente y resolver conflictos sin perder tu progreso.</p>
   </header>
 
   <main>
-    <h2>1️⃣ Cambiar a la rama principal</h2>
-    <pre><code>git checkout main</code></pre>
+    <section>
+      <h2>🧠 Antes de empezar</h2>
+      <p>
+        Antes de combinar ramas, es importante entender que <strong>una rama se combina dentro de otra</strong>.  
+        Es decir, debes decidir <em>a cuál rama se van a traer los cambios</em>.
+      </p>
+      <ul>
+        <li><strong>Ejemplo:</strong> Tienes dos ramas:
+          <ul>
+            <li><code>main</code> → Es la rama principal del proyecto (la versión estable).</li>
+            <li><code>developer</code> → Es donde trabajas en nuevas funciones o pruebas.</li>
+          </ul>
+        </li>
+        <li>Si deseas que los cambios de <code>developer</code> pasen a <code>main</code>, debes combinar <code>developer</code> dentro de <code>main</code>.</li>
+        <li>En cambio, si quieres que <code>developer</code> tenga los últimos cambios de <code>main</code> antes de seguir trabajando, debes combinar <code>main</code> dentro de <code>developer</code>.</li>
+      </ul>
+      <p><strong>💡 Consejo:</strong> Antes de hacer cualquier fusión, asegúrate de que ambas ramas estén actualizadas y subidas al repositorio remoto con <code>git push</code>.  
+      Si no lo haces, Git no podrá reconocer los cambios más recientes.</p>
+    </section>
 
-    <h2>2️⃣ Combinar otra rama</h2>
-    <pre><code>git merge nombre_rama</code></pre>
-    <p>Git intentará combinar los cambios automáticamente. Si hay conflictos, deberás resolverlos.</p>
+    <section>
+      <h2>1️⃣ Verifica en qué rama estás</h2>
+      <p>Ejecuta el siguiente comando para ver tu rama actual:</p>
+      <pre><code>git branch</code></pre>
+      <p>La rama marcada con un asterisco (<code>*</code>) es la activa.</p>
+    </section>
 
-    <h2>3️⃣ Resolver conflictos</h2>
-    <p>Si dos personas modifican el mismo archivo, Git mostrará secciones así:</p>
-    <pre><code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Tu versión
+    <section>
+      <h2>2️⃣ Cambia a la rama donde quieres traer los cambios</h2>
+      <p>Si vas a fusionar los cambios de <code>developer</code> dentro de <code>main</code>, primero cambia a <code>main</code>:</p>
+      <pre><code>git checkout main</code></pre>
+      <p>Esto significa: “quiero que <code>main</code> reciba los cambios de otra rama”.</p>
+    </section>
+
+    <section>
+      <h2>3️⃣ Combina la otra rama</h2>
+      <p>Ahora combina la rama <code>developer</code> dentro de <code>main</code> con el siguiente comando:</p>
+      <pre><code>git merge developer</code></pre>
+      <p>Esto le dice a Git: “trae los cambios de <code>developer</code> y únelos con mi rama actual (<code>main</code>)”.</p>
+    </section>
+
+    <section>
+      <h2>4️⃣ Subir los cambios fusionados al repositorio remoto</h2>
+      <p>Una vez la fusión sea exitosa, sube los cambios a tu repositorio remoto:</p>
+      <pre><code>git push origin main</code></pre>
+    </section>
+
+    <section>
+      <h2>⚠️ En caso de conflictos</h2>
+      <p>Si Git detecta que ambos modificaron el mismo archivo o la misma línea, mostrará un conflicto con esta estructura:</p>
+      <pre><code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Tu versión (rama actual)
 =======
 Versión de la otra rama
-&gt;&gt;&gt;&gt;&gt;&gt; otra_rama</code></pre>
+&gt;&gt;&gt;&gt;&gt;&gt; developer</code></pre>
+      <p>Edita el archivo y deja solo la versión correcta. Luego, marca el conflicto como resuelto:</p>
+      <pre><code>git add archivo_afectado</code></pre>
+      <pre><code>git commit -m "Conflicto resuelto en archivo_afectado"</code></pre>
+      <p>Finalmente, sube los cambios nuevamente:</p>
+      <pre><code>git push origin main</code></pre>
+    </section>
 
-    <p>Edita el archivo para dejar solo la versión correcta, luego ejecuta:</p>
-    <pre><code>git add archivo_afectado
-git commit -m "Conflicto resuelto"</code></pre>
+    <section>
+      <h2>🧩 Resumen rápido</h2>
+      <ol>
+        <li><strong>Actualiza ambas ramas:</strong> <code>git pull origin main</code> y <code>git pull origin developer</code></li>
+        <li><strong>Cámbiate a la rama que recibirá los cambios:</strong> <code>git checkout main</code></li>
+        <li><strong>Haz la fusión:</strong> <code>git merge developer</code></li>
+        <li><strong>Resuelve conflictos si los hay:</strong> edita y <code>git add</code> + <code>git commit</code></li>
+        <li><strong>Sube los cambios:</strong> <code>git push origin main</code></li>
+      </ol>
+    </section>
 
     <a href="index.html" class="volver">⬅ Volver al inicio</a>
   </main>
