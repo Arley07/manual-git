@@ -3,33 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crear y subir un repositorio</title>
+  <title>Crear un Repositorio</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header>
-    <h1>📁 Crear y Subir tu Primer Repositorio</h1>
-    <p>Aprende cómo crear un proyecto nuevo, hacer tus primeros commits y subirlo a GitHub.</p>
+    <h1>📁 Crear un Nuevo Repositorio en Git</h1>
+    <p>Aprende a crear y subir tu proyecto a un repositorio remoto en GitHub.</p>
   </header>
 
   <main>
-    <h2>1️⃣ Crear un nuevo repositorio</h2>
+    <h2>1️⃣ Inicializar un repositorio local</h2>
     <pre><code>git init</code></pre>
-    <p>Esto inicializa Git en la carpeta actual creando un directorio oculto <code>.git</code>.</p>
+    <p>Crea una carpeta <code>.git</code> que le dice a Git que empiece a controlar los cambios.</p>
 
-    <h2>2️⃣ Agregar archivos</h2>
+    <h2>2️⃣ Agregar tus archivos</h2>
     <pre><code>git add .</code></pre>
-    <p>Agrega todos los archivos al área de preparación. Usa <code>git add archivo.txt</code> si quieres agregar solo uno.</p>
+    <p>Esto agrega todos los archivos al área de preparación.</p>
 
-    <h2>3️⃣ Guardar los cambios (commit)</h2>
-    <pre><code>git commit -m "Primer commit: inicializa el proyecto"</code></pre>
+    <h2>3️⃣ Crear el primer commit</h2>
+    <pre><code>git commit -m "Primer commit"</code></pre>
 
-    <h2>4️⃣ Conectar con GitHub</h2>
-    <pre><code>git remote add origin https://github.com/usuario/repositorio.git</code></pre>
+    <h2>4️⃣ Crear un repositorio en GitHub</h2>
+    <p>Ve a <a href="https://github.com/new" target="_blank">https://github.com/new</a> y crea un nuevo repositorio vacío.</p>
 
-    <h2>5️⃣ Subir los cambios</h2>
+    <h2>5️⃣ Conectar el repositorio local con el remoto</h2>
+    <pre><code>git remote add origin https://github.com/TU_USUARIO/TU_REPO.git</code></pre>
+
+    <h2>6️⃣ Subir tus archivos</h2>
+    <pre><code>git branch -M main</code></pre>
     <pre><code>git push -u origin main</code></pre>
-    <p>Si la rama principal es <code>master</code>, reemplaza <code>main</code> por <code>master</code>.</p>
+
+    <p>Tu proyecto ya estará disponible en GitHub 🚀</p>
 
     <a href="index.html" class="volver">⬅ Volver al inicio</a>
   </main>

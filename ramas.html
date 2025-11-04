@@ -3,29 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabajar con Ramas</title>
+  <title>Crear y Trabajar con Ramas</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header>
-    <h1>🌿 Trabajar con Ramas</h1>
-    <p>Aprende a crear, cambiar, y combinar ramas sin afectar tu versión principal.</p>
+    <h1>🌿 Crear y Trabajar con Ramas</h1>
+    <p>Aprende a crear, cambiar y eliminar ramas en Git sin afectar tu código principal.</p>
   </header>
 
   <main>
-    <h2>1️⃣ Ver ramas existentes</h2>
+    <h2>1️⃣ ¿Qué es una rama?</h2>
+    <p>
+      Una <strong>rama</strong> es una línea de desarrollo independiente.  
+      Te permite trabajar en nuevas funciones sin alterar la versión estable (<code>main</code>).
+    </p>
+
+    <h2>2️⃣ Ver tus ramas actuales</h2>
     <pre><code>git branch</code></pre>
 
-    <h2>2️⃣ Crear una nueva rama</h2>
-    <pre><code>git branch nombre_rama</code></pre>
+    <h2>3️⃣ Crear una nueva rama</h2>
+    <pre><code>git branch developer</code></pre>
+    <p>Esto crea una rama llamada <code>developer</code> basada en tu rama actual.</p>
 
-    <h2>3️⃣ Cambiar de rama</h2>
-    <pre><code>git checkout nombre_rama</code></pre>
-    <p>O con la versión moderna:</p>
-    <pre><code>git switch nombre_rama</code></pre>
+    <h2>4️⃣ Cambiar de rama</h2>
+    <pre><code>git checkout developer</code></pre>
+    <p>Ahora estás trabajando en <code>developer</code>. Los cambios que hagas aquí no afectarán a <code>main</code>.</p>
 
-    <h2>4️⃣ Crear y moverte a la nueva rama al mismo tiempo</h2>
-    <pre><code>git checkout -b nombre_rama</code></pre>
+    <h2>5️⃣ Crear y moverte en un solo paso</h2>
+    <pre><code>git checkout -b nueva-funcionalidad</code></pre>
+
+    <h2>6️⃣ Subir tu nueva rama al repositorio remoto</h2>
+    <pre><code>git push -u origin developer</code></pre>
+
+    <h2>7️⃣ Eliminar una rama (cuando ya no se necesita)</h2>
+    <pre><code>git branch -d developer</code></pre>
 
     <a href="index.html" class="volver">⬅ Volver al inicio</a>
   </main>

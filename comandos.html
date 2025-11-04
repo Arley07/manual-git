@@ -3,39 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comandos Útiles y Buenas Prácticas</title>
+  <title>Comandos Útiles de Git</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header>
-    <h1>💡 Comandos Útiles y Buenas Prácticas</h1>
-    <p>Domina los comandos esenciales para trabajar de manera profesional con Git.</p>
+    <h1>💻 Comandos Útiles de Git</h1>
+    <p>Una lista de comandos esenciales para el día a día con Git.</p>
   </header>
 
   <main>
-    <h2>Comandos básicos</h2>
-    <ul>
-      <li><code>git status</code> – Ver el estado actual del repositorio.</li>
-      <li><code>git diff</code> – Ver las diferencias entre los cambios hechos y los confirmados.</li>
-      <li><code>git log</code> – Mostrar el historial de commits.</li>
-      <li><code>git log --oneline --graph --all</code> – Ver el historial de forma visual.</li>
-    </ul>
+    <h2>📦 Control de versiones</h2>
+    <pre><code>git status</code></pre>
+    <p>Muestra los archivos modificados, agregados o pendientes.</p>
 
-    <h2>Guardar y recuperar cambios temporales</h2>
-    <pre><code>git stash          # Guarda cambios sin hacer commit
-git stash pop      # Recupera los cambios guardados</code></pre>
+    <pre><code>git diff</code></pre>
+    <p>Compara los cambios entre tu versión actual y la última confirmada.</p>
 
-    <h2>Eliminar ramas</h2>
-    <pre><code>git branch -d nombre_rama           # Elimina rama local
-git push origin --delete nombre_rama # Elimina rama remota</code></pre>
+    <h2>📜 Historial</h2>
+    <pre><code>git log</code></pre>
+    <p>Muestra el historial de commits.</p>
 
-    <h2>Buenas prácticas</h2>
-    <ul>
-      <li>Usa nombres descriptivos para las ramas (ej: <code>feature/login</code> o <code>bugfix/error-404</code>).</li>
-      <li>Escribe mensajes de commit claros y breves.</li>
-      <li>Haz <code>git pull</code> antes de hacer <code>git push</code> para evitar conflictos.</li>
-      <li>No subas archivos grandes ni datos sensibles (usa <code>.gitignore</code>).</li>
-    </ul>
+    <pre><code>git log --oneline --graph --decorate --all</code></pre>
+    <p>Muestra el historial de una forma visual y resumida.</p>
+
+    <h2>🔙 Deshacer cambios</h2>
+    <pre><code>git checkout -- nombre_archivo</code></pre>
+    <p>Descarta los cambios locales en un archivo.</p>
+
+    <pre><code>git reset HEAD nombre_archivo</code></pre>
+    <p>Saca un archivo del área de preparación sin perder los cambios.</p>
+
+    <pre><code>git revert ID_COMMIT</code></pre>
+    <p>Crea un nuevo commit que revierte los cambios de un commit anterior.</p>
+
+    <h2>🧩 Actualizar y sincronizar</h2>
+    <pre><code>git pull</code></pre>
+    <p>Descarga y combina los cambios del repositorio remoto en tu rama local.</p>
+
+    <pre><code>git fetch</code></pre>
+    <p>Descarga los cambios sin combinarlos todavía (útil para revisar antes de hacer merge).</p>
 
     <a href="index.html" class="volver">⬅ Volver al inicio</a>
   </main>
