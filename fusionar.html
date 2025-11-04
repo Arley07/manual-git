@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combinar Ramas y Resolver Conflictos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>🔄 Combinar Ramas y Resolver Conflictos</h1>
+    <p>Aprende a fusionar tus ramas y resolver conflictos sin perder tu progreso.</p>
+  </header>
+
+  <main>
+    <h2>1️⃣ Cambiar a la rama principal</h2>
+    <pre><code>git checkout main</code></pre>
+
+    <h2>2️⃣ Combinar otra rama</h2>
+    <pre><code>git merge nombre_rama</code></pre>
+    <p>Git intentará combinar los cambios automáticamente. Si hay conflictos, deberás resolverlos.</p>
+
+    <h2>3️⃣ Resolver conflictos</h2>
+    <p>Si dos personas modifican el mismo archivo, Git mostrará secciones así:</p>
+    <pre><code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Tu versión
+=======
+Versión de la otra rama
+&gt;&gt;&gt;&gt;&gt;&gt; otra_rama</code></pre>
+
+    <p>Edita el archivo para dejar solo la versión correcta, luego ejecuta:</p>
+    <pre><code>git add archivo_afectado
+git commit -m "Conflicto resuelto"</code></pre>
+
+    <a href="index.html" class="volver">⬅ Volver al inicio</a>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurar Git</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>⚙️ Configurar Git</h1>
+    <p>Define tu nombre y correo electrónico para que tus cambios sean reconocidos.</p>
+  </header>
+
+  <main>
+    <h2>1️⃣ Configuración inicial</h2>
+    <p>Ejecuta estos comandos solo una vez para identificarte en tu sistema:</p>
+    <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tucorreo@ejemplo.com"</code></pre>
+
+    <h2>2️⃣ Verificar configuración</h2>
+    <pre><code>git config --list</code></pre>
+    <p>Esto mostrará tus datos y otras configuraciones activas de Git.</p>
+
+    <h2>3️⃣ Editar o eliminar configuraciones</h2>
+    <ul>
+      <li><strong>Editar:</strong> <code>git config --global user.name "Nuevo Nombre"</code></li>
+      <li><strong>Eliminar:</strong> <code>git config --global --unset user.email</code></li>
+    </ul>
+
+    <a href="index.html" class="volver">⬅ Volver al inicio</a>
+  </main>
+</body>
+</html>

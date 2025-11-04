@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear y subir un repositorio</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>📁 Crear y Subir tu Primer Repositorio</h1>
+    <p>Aprende cómo crear un proyecto nuevo, hacer tus primeros commits y subirlo a GitHub.</p>
+  </header>
+
+  <main>
+    <h2>1️⃣ Crear un nuevo repositorio</h2>
+    <pre><code>git init</code></pre>
+    <p>Esto inicializa Git en la carpeta actual creando un directorio oculto <code>.git</code>.</p>
+
+    <h2>2️⃣ Agregar archivos</h2>
+    <pre><code>git add .</code></pre>
+    <p>Agrega todos los archivos al área de preparación. Usa <code>git add archivo.txt</code> si quieres agregar solo uno.</p>
+
+    <h2>3️⃣ Guardar los cambios (commit)</h2>
+    <pre><code>git commit -m "Primer commit: inicializa el proyecto"</code></pre>
+
+    <h2>4️⃣ Conectar con GitHub</h2>
+    <pre><code>git remote add origin https://github.com/usuario/repositorio.git</code></pre>
+
+    <h2>5️⃣ Subir los cambios</h2>
+    <pre><code>git push -u origin main</code></pre>
+    <p>Si la rama principal es <code>master</code>, reemplaza <code>main</code> por <code>master</code>.</p>
+
+    <a href="index.html" class="volver">⬅ Volver al inicio</a>
+  </main>
+</body>
+</html>

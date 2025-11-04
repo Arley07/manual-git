@@ -1,0 +1,116 @@
+/* ====================================================
+   ESTILOS GLOBALES - MANUAL GIT
+   ==================================================== */
+
+:root {
+    --color-principal: #14854c;
+    --color-secundario: #222;
+    --color-fondo: #f9f9f9;
+    --color-texto: #333;
+    --color-hover: #1c8f48;
+    --transicion: 0.3s ease;
+    --radio: 0.75rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom-left-radius: var(--radio);
+    border-bottom-right-radius: var(--radio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--radio);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Listas tipo menú */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    background: var(--color-secundario);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--radio);
+    transition: var(--transicion);
+}
+
+.menu li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.menu li:hover {
+    background: var(--color-hover);
+    transform: translateX(5px);
+}
+
+/* Botón volver */
+.volver {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: var(--color-principal);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radio);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.volver:hover {
+    background: var(--color-hover);
+}
+
+/* Titulares */
+h2 {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-principal);
+    padding-bottom: 0.3rem;
+}
+
+/* Código */
+code {
+    background: #eee;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    font-family: monospace;
+    color: #111;
+}
+
+/* Bloques de comando */
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: var(--radio);
+    overflow-x: auto;
+}
